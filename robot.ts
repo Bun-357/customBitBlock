@@ -65,5 +65,41 @@
 		pins.digitalWritePin(DigitalPin.P0, 0)
 		pins.digitalWritePin(DigitalPin.P1, 0)
     }
+	/**
+     * Drives trun left. Call stop to stop
+     */
+    //% subcategory=RobotControl
+    //% blockId=RobotControl_lefts
+    //% block="trun left %speed|0-100% %difference: difference between L and R 0 - 100%" color=180
+    export function trunLeft(difference: number, speed: number): void {
+        let speedBit = pins.map(speed,0,100,0,1023)
+		let diffBit = (speed - difference)
+		if(diffBit < 0){
+			diffBit = 0
+		}
+		diffBit = pins.map(diffBit,0,100,0,1023)
+		pins.analogWritePin(AnalogPin.P16, diffBit)
+		pins.analogWritePin(AnalogPin.P15, speedBit)
+		pins.digitalWritePin(DigitalPin.P0, 0)
+		pins.digitalWritePin(DigitalPin.P1, 0)
+    }
+	/**
+     * Drives trun right. Call stop to stop
+     */
+    //% subcategory=RobotControl
+    //% blockId=RobotControl_rights
+    //% block="trun right %speed|0-100% %difference: difference between L and R 0 - 100%" color=180
+    export function trunRight(difference: number, speed: number): void {
+        let speedBit = pins.map(speed,0,100,0,1023)
+		let diffBit = (speed - difference)
+		if(diffBit < 0){
+			diffBit = 0
+		}
+		diffBit = pins.map(diffBit,0,100,0,1023)
+		pins.analogWritePin(AnalogPin.P16, speedBit)
+		pins.analogWritePin(AnalogPin.P15, diffBit)
+		pins.digitalWritePin(DigitalPin.P0, 0)
+		pins.digitalWritePin(DigitalPin.P1, 0)
+    }
  }
 	
