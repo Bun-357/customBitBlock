@@ -4,7 +4,7 @@
 	************************************************************************************************************************************************/
  /**
      * Drives forwards. Call stop to stop
-	 * @param speed speed when move
+	 * @param speed speeds when move
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_forward
