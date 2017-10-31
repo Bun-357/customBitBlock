@@ -4,10 +4,11 @@
 	************************************************************************************************************************************************/
  /**
      * Drives forwards. Call stop to stop
+	 * @param speed speed when move
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_forward
-    //% block="drive forward %speed|speed" color=120
+    //% block="drive forward %speed|speeds" color=120
     export function forward(speed: number): void {
         // pins.digitalWritePin(DigitalPin.P16, 1)
 		// pins.digitalWritePin(DigitalPin.P15, 1)
