@@ -7,7 +7,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_forward
-    //% block="drive forward"
+    //% block="drive forward" color=120
     export function forward(): void {
         pins.digitalWritePin(DigitalPin.P16, 1)
 		pins.digitalWritePin(DigitalPin.P15, 1)
@@ -20,7 +20,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_backward
-    //% block="drive back"
+    //% block="drive back" color=60
     export function backward(): void {
         pins.digitalWritePin(DigitalPin.P16, 0)
 		pins.digitalWritePin(DigitalPin.P15, 0)
@@ -32,7 +32,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_left
-    //% block="spin left"
+    //% block="spin left" color=180
     export function spinLeft(): void {
         pins.digitalWritePin(DigitalPin.P16, 0)
 		pins.digitalWritePin(DigitalPin.P15, 1)
@@ -44,7 +44,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_right
-    //% block="spin right"
+    //% block="spin right" color=240
     export function spinRight(): void {
         pins.digitalWritePin(DigitalPin.P16, 1)
 		pins.digitalWritePin(DigitalPin.P15, 0)
@@ -56,7 +56,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_stop
-    //% block="drive stop"
+    //% block="drive stop" color=360
     export function stop(): void {
         pins.digitalWritePin(DigitalPin.P16, 0)
 		pins.digitalWritePin(DigitalPin.P15, 0)
