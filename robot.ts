@@ -7,10 +7,12 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_forward
-    //% block="drive forward" color=120
-    export function forward(): void {
-        pins.digitalWritePin(DigitalPin.P16, 1)
-		pins.digitalWritePin(DigitalPin.P15, 1)
+    //% block="drive forward %speed|speed" color=120
+    export function forward(speed: number): void {
+        // pins.digitalWritePin(DigitalPin.P16, 1)
+		// pins.digitalWritePin(DigitalPin.P15, 1)
+		pins.analogWritePin(AnalogPin.P16, speed)
+		pins.analogWritePin(AnalogPin.P15, speed)
 		pins.digitalWritePin(DigitalPin.P0, 0)
 		pins.digitalWritePin(DigitalPin.P1, 0)
     }
