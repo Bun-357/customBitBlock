@@ -70,7 +70,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_lefts
-    //% block="trun left speed|%speed|0-100 %difference|differences between L and R 0 - 100" color=180
+    //% block="trun left %speed|0-100 %difference|differences between L and R 0 - 100" color=180
     export function trunLeft(speed: number, difference: number): void {
         let speedBit = pins.map(speed,0,100,0,1023)
 		let diffBit = (speed - difference)
@@ -88,7 +88,7 @@
      */
     //% subcategory=RobotControl
     //% blockId=RobotControl_rights
-    //% block="trun right speed|%speed|0-100 %difference|differences between L and R 0 - 100" color=180
+    //% block="trun right %speed|0-100 %difference|differences between L and R 0 - 100" color=180
     export function trunRight(speed: number, difference: number): void {
         let speedBit = pins.map(speed,0,100,0,1023)
 		let diffBit = (speed - difference)
