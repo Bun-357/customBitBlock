@@ -10,9 +10,9 @@
     //% blockId=RobotControl_forward
     //% block="drive forward %speed|0-100%" color=120
     export function forward(speed: number): void {
-		pins.map(speed,0,100,0,1023)
-		pins.analogWritePin(AnalogPin.P16, speed)
-		pins.analogWritePin(AnalogPin.P15, speed)
+		let speedBit = pins.map(speed,0,100,0,1023)
+		pins.analogWritePin(AnalogPin.P16, speedBit)
+		pins.analogWritePin(AnalogPin.P15, speedBit)
 		pins.digitalWritePin(DigitalPin.P0, 0)
 		pins.digitalWritePin(DigitalPin.P1, 0)
     }
